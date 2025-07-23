@@ -1,0 +1,177 @@
+/*commons*/
+:root{
+  --tale-color: rgb(111, 227 ,205);
+  --navy-color: #010157;
+  --red-color: #cd1a14;
+  --white-color:#eee;
+}
+
+/*general*/
+body{
+  font-family: 'roboto','sans-serif';
+  height: 100px;
+  background: var(--white-color);
+}
+.btn{
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border-color: rgba(145,25,25,0.97);
+}
+.btn:hover{
+  color: var(--tale-color);
+  background-color: var(--navy-color);
+}
+.logo-size{
+  width: 40px;
+  height: 40px;
+}
+
+/*navbar*/
+.navbar{
+  background: var(--tale-color);
+  --bs-navbar-padding-y: 0.1rem;
+}
+.navbar .navbar-nav .nav-link{
+  color: var(--navy-color);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover
+{
+  color: var(--tale-color);
+  background: var(--navy-color);
+}
+.search{
+  border-left: 2px dashed var(--navy-color) ;
+}
+.search svg{
+  color: var(--navy-color) ;
+}
+.navbar .navbar-toggler{
+  color: var(--navy-color) ;
+  border-color: var(--navy-color);
+}
+
+/*intro*/
+.landing{
+  background: var(--tale-color);
+  min-height: calc(80vh - 72px);
+  color: var(--navy-color);
+}
+
+/*features*/
+.main-title::after{
+  content:' ';
+  width: 100px;
+  height: 2px;
+  background-color: var(--tale-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder{
+  height: 200px;
+}
+.features .icon-holder svg{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number{
+  font-size: 8rem;
+  color: rgba(255, 100 ,90, 0.1);
+}
+.features .icon-holder .icon{
+  color: var(--tale-color);
+  top: 120px;
+}
+.features .feat h4{
+  color: var(--red-color);
+}
+
+/*work*/
+.work ul .active{
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border-color: rgba(145,25,25,0.97);
+  border-radius: 15%;
+}
+.work ul li{
+  cursor: pointer;
+}
+.work ul li:not(.active):hover{
+  color: var(--red-color);
+}
+.work .box{
+   padding: 5px;
+   position : relative ;
+   overflow:hidden;
+}
+.work .box::before{
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  display: flex;
+  height: calc(100% - 10px);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 200, 0.45);
+  font-weight: bold;
+  color: var(--navy-color);
+  transition: 0.5s;
+  font-size: 25px;
+  transform: translateX(calc(-100% - 5px));
+}
+.work .box:hover::before{
+    transform: translateX(0);
+}
+
+/*stuff*/
+.stuff .description{
+  max-width: 500px;
+}
+
+/*team*/
+.team .box{
+  background-color: white;
+  border: 1px solid var(--tale-color);
+}
+.team .box h5{
+  background-color: var(--tale-color);
+  color: var(--navy-color);
+}
+
+/*teach  & project*/
+.teach img{
+  width: 50px;
+  height:50px;
+}
+.project{
+  background-color: var(--navy-color);
+  color: var(--tale-color);
+}
+
+/*subscribe*/
+.subscribe {
+  background-color: var(--tale-color);
+  color: var(--navy-color);
+
+}
+.subscribe input[type="text"]{
+  border: none;
+  border-bottom: 1px solid var(--navy-color);
+  color: var(--navy-color);
+}
+.subscribe input[type="text"]:focus{
+  outline: none;
+}
+.subscribe::placeholder{
+  color: var(--white-color);
+}
+
+/*footer*/
+.footer{
+  background-color: var(--navy-color);
+}
+.footer span,.footer h5{
+  color: var(--white-color);
+}
