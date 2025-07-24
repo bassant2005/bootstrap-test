@@ -1,45 +1,109 @@
 /*commons*/
 :root{
-  --tale-color: rgb(111, 227 ,205);
+  --tale-color: #00d1b2;
   --navy-color: #010157;
-  --red-color: #cd1a14;
-  --white-color:#eee;
+  --red-color: rgba(255,0,155,.9);
+  --white-color: #eae9e9;
 }
 
 /*general*/
 body{
-  font-family: 'roboto','sans-serif';
+  font-family: "Bitcount Prop Single";
   height: 100px;
-  background: var(--white-color);
+  background: var(--navy-color);
 }
+
 .btn{
   color: var(--white-color);
   background-color: var(--red-color);
-  border-color: rgba(145,25,25,0.97);
 }
 .btn:hover{
-  color: var(--tale-color);
-  background-color: var(--navy-color);
+  color: var(--navy-color);
+  background-color: var(--tale-color);
 }
+
 .logo-size{
   width: 40px;
   height: 40px;
 }
 
+.main-title::after{
+  content:' ';
+  width: 100px;
+  height: 2px;
+  background-color: var(--tale-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s;
+}
+.box:hover img {
+  filter: blur(2px) brightness(0.5);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 200, 0.5);
+  color: var(--navy-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  transform: translateX(-110%);
+  transition: transform 0.5s ease;
+  font-size: 18px;
+  font-weight: bold;
+}
+.box:hover .overlay {
+  transform: translateX(0);
+}
+.overlay .btn-link {
+  margin-top: 15px;
+  background-color: var(--navy-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+h2{
+  color: var(--red-color);
+}
+
 /*navbar*/
 .navbar{
-  background: var(--tale-color);
+  background: var(--navy-color);
   --bs-navbar-padding-y: 0.1rem;
 }
 .navbar .navbar-nav .nav-link{
-  color: var(--navy-color);
+  color: var(--red-color);
 }
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover
 {
   color: var(--tale-color);
-  background: var(--navy-color);
+  box-shadow: 0 2px 25px mediumpurple;
 }
 .search{
   border-left: 2px dashed var(--navy-color) ;
@@ -53,101 +117,16 @@ body{
 }
 
 /*intro*/
-.landing{
-  background: var(--tale-color);
+.intro{
+  background-image: url("/games/intro.jfif");
+  background-size: cover;
+  background-position: center;
   min-height: calc(80vh - 72px);
-  color: var(--navy-color);
-}
-
-/*features*/
-.main-title::after{
-  content:' ';
-  width: 100px;
-  height: 2px;
-  background-color: var(--tale-color);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.features .icon-holder{
-  height: 200px;
-}
-.features .icon-holder svg{
-  left: 50%;
-  transform: translateX(-50%);
-}
-.features .icon-holder .number{
-  font-size: 8rem;
-  color: rgba(255, 100 ,90, 0.1);
-}
-.features .icon-holder .icon{
-  color: var(--tale-color);
-  top: 120px;
-}
-.features .feat h4{
-  color: var(--red-color);
-}
-
-/*work*/
-.work ul .active{
   color: var(--white-color);
-  background-color: var(--red-color);
-  border-color: rgba(145,25,25,0.97);
-  border-radius: 15%;
 }
-.work ul li{
-  cursor: pointer;
-}
-.work ul li:not(.active):hover{
-  color: var(--red-color);
-}
-.work .box{
-   padding: 5px;
-   position : relative ;
-   overflow:hidden;
-}
-.work .box::before{
-  content: attr(data-work);
-  position: absolute;
-  width: calc(100% - 10px);
-  display: flex;
-  height: calc(100% - 10px);
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 255, 200, 0.45);
-  font-weight: bold;
-  color: var(--navy-color);
-  transition: 0.5s;
-  font-size: 25px;
-  transform: translateX(calc(-100% - 5px));
-}
-.work .box:hover::before{
-    transform: translateX(0);
-}
-
-/*stuff*/
-.stuff .description{
-  max-width: 500px;
-}
-
-/*team*/
-.team .box{
-  background-color: white;
-  border: 1px solid var(--tale-color);
-}
-.team .box h5{
-  background-color: var(--tale-color);
-  color: var(--navy-color);
-}
-
-/*teach  & project*/
-.teach img{
-  width: 50px;
-  height:50px;
-}
-.project{
-  background-color: var(--navy-color);
-  color: var(--tale-color);
+.intro h2{
+  background: linear-gradient(var(--white-color), transparent);
+  padding: 1%;
 }
 
 /*subscribe*/
@@ -166,6 +145,59 @@ body{
 }
 .subscribe::placeholder{
   color: var(--white-color);
+}
+
+/*character*/
+.description span{
+  color: var(--white-color);
+}
+.character img{
+  width: 500px;
+  filter: drop-shadow(0 -10px 25px var(--tale-color));
+}
+
+/*Auto-Scroll*/
+.Auto-Scroll{
+  background-color: var(--white-color);
+}
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slide-track {
+  display: flex;
+  width: calc(250px * 8);
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.game-box {
+  width: 250px;
+  height: 400px;
+  margin: 0 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  color: var(--white-color);
+  padding: 10px;
+  box-shadow: 0 0 10px var(--tale-color);
+  text-align: center;
+}
+.game-box img {
+  width: 100%;
+  height: 90%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /*footer*/
