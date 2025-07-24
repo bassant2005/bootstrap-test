@@ -118,10 +118,12 @@ h2{
 
 /*intro*/
 .intro{
-  background-image: url("intro.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: calc(80vh - 72px);
+  background-image: url("intro.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh !important;
+  border: 5px solid lime !important;
   color: var(--white-color);
 }
 .intro h2{
