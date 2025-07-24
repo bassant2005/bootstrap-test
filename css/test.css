@@ -117,15 +117,20 @@ h2{
 }
 
 /*intro*/
-.intro{
-  background-image: url("intro.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  min-height: 100vh !important;
-  border: 5px solid lime !important;
-  color: var(--white-color);
+.intro {
+  background-image: url("intro.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 5px solid lime; /* for test */
 }
+
 .intro h2{
   background: linear-gradient(var(--white-color), transparent);
   padding: 1%;
