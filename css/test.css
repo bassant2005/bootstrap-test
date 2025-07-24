@@ -155,6 +155,14 @@ h2{
   width: 500px;
   filter: drop-shadow(0 -10px 25px var(--tale-color));
 }
+.lap img {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.lap img:hover {
+  transform: scale(0.9) translateZ(10px); /* zoom in and slightly push forward */
+}
 
 /*Auto-Scroll*/
 .Auto-Scroll{
