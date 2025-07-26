@@ -8,13 +8,32 @@
 
 /*general*/
 body{
-  font-family: "Bitcount Prop Single";
-  height: 100px;
+  font-family: "Bitcount Prop Single", serif;
   background: var(--navy-color);
 }
 
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    font-weight: bold;
+}
+label {
+    font-size: 18px;
+    color:var(--navy-color);
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px dashed  var(--tale-color);
+    border-radius: 5px;
+}
+
 .btn{
-  color: var(--white-color);
+  color: var(--navy-color);
   background-color: var(--red-color);
 }
 .btn:hover{
@@ -90,12 +109,13 @@ h2{
   color: var(--red-color);
 }
 
+
 /*navbar*/
 .navbar{
   background: var(--navy-color);
   --bs-navbar-padding-y: 0.1rem;
 }
-.navbar .navbar-nav .nav-link{
+.navbar .navbar-nav .nav-link,.navbar-brand{
   color: var(--red-color);
 }
 .navbar .navbar-nav .nav-link.active,
@@ -105,16 +125,18 @@ h2{
   color: var(--tale-color);
   box-shadow: 0 2px 25px mediumpurple;
 }
+.navbar .navbar-toggler{
+  color: var(--navy-color) ;
+  border-color: var(--navy-color);
+}
+
 .search{
   border-left: 2px dashed var(--navy-color) ;
 }
 .search svg{
   color: var(--navy-color) ;
 }
-.navbar .navbar-toggler{
-  color: var(--navy-color) ;
-  border-color: var(--navy-color);
-}
+
 
 /*intro*/
 .intro{
@@ -147,6 +169,7 @@ h2{
   color: var(--white-color);
 }
 
+
 /*character*/
 .description span{
   color: var(--white-color);
@@ -155,19 +178,26 @@ h2{
   width: 170px;
   filter: drop-shadow(0 -10px 25px var(--tale-color));
 }
-.lap img {
+.character img {
   transition: transform 0.3s ease;
   transform-style: preserve-3d;
 }
-
-.lap img:hover {
+.character img:hover {
   transform: scale(0.9) translateZ(10px); /* zoom in and slightly push forward */
 }
+
+
+/*game img*/
+#img img{
+  width: 400px;
+}
+
 
 /*Auto-Scroll*/
 .Auto-Scroll{
   background-color: var(--white-color);
 }
+
 .slider {
   overflow: hidden;
   position: relative;
@@ -208,10 +238,38 @@ h2{
   margin-bottom: 10px;
 }
 
+
 /*footer*/
 .footer{
   background-color: var(--navy-color);
 }
 .footer span,.footer h5{
   color: var(--white-color);
+}
+
+/*cart & profile*/
+.cart img{
+  margin-right: 10%;
+}
+.cart .btn{
+  width: 100%;
+}
+.cart{
+  margin-bottom: 5%;
+  margin-top: 2.5%;
+  padding: 2%;
+  border-radius: 2% ;
+  color: var(--navy-color);
+  font-size: 20px;
+  background-color: var(--white-color);
+}
+.total{
+  padding: 2%;
+  border-radius: 2% ;
+  color: var(--navy-color);
+  font-size: 20px;
+  background-color: var(--white-color);
+}
+.cart.progress{
+  color: var(--tale-color);
 }

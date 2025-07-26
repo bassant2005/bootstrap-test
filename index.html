@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:slnt,wght@-4,300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/all.min.css">
 <!--    title icon-->
-    <link rel="icon" href="games/logo.png" type="image/png">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <body>
@@ -21,7 +21,9 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
 <!--      logo-->
-      <a class="navbar-brand" href="#"><img src="games/logo.png" class="logo-size"></a>
+      <a class="navbar-brand" >
+        <img src="logo.png" class="logo-size">game bot
+      </a>
 <!--      taget button-->
       <button class="navbar-toggler"
               type="button"
@@ -40,13 +42,21 @@
             <a class="nav-link" href="#best">best-selling</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#sales">sales</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#coming">coming soon</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">contact</a>
           </li>
         </ul>
-        <a class="btn rounded-pill main-btn" href="#">login</a>
+        <a class="nav-link" href="cart.html">
+          <i class="me-2 fa-solid fa-cart-shopping" style="color: #ff009e;width: 25px; height: 25px;"></i>
+        </a>
+        <a class="nav-link" href="user.html">
+          <i class="fa-solid fa-user" style="color: #ff009e; width: 25px; height: 25px;"></i>
+        </a>
       </div>
     </div>
   </nav>
@@ -58,7 +68,7 @@
       <p class="fs-5 fst-italic pb-2">
         Discover untold stories, epic battles, and worlds beyond imagination.
       </p>
-      <a class="btn rounded-pill main-btn" href="#">Begin Your Journey</a>
+      <a class="btn main-btn" href="#games">Begin Your Journey</a>
     </div>
   </div>
 
@@ -97,7 +107,7 @@
             <img src="games/Resident%20evil%207.jfif" class="img-fluid">
             <div class="overlay">
               <p>Resident Evil 7-Survival horror at its best</p>
-              <a href="#" class="btn-link">Explore</a>
+              <a href="game.html" class="btn-link">Explore</a>
             </div>
           </div>
         </div>
@@ -152,7 +162,7 @@
           </div>
         </div>
         <!-- More Button -->
-        <a class="btn rounded-pill main-btn" href="#">More Worlds</a>
+        <a class="btn main-btn" href="#">More Worlds</a>
       </div>
     </div>
   </div>
@@ -209,6 +219,59 @@
     </div>
   </div>
 
+<!--  sales-->
+  <div id="sales" class="best text-center pt-4 pb-4">
+    <div class="container">
+      <div class="main-title mt-3 mb-4 position-relative">
+        <h2>30 % sales</h2>
+        <p class="text-white-50 fst-italic">don't miss this chance!</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <img src="games/tomb%20rider.jfif" class="img-fluid">
+            <div class="overlay">
+              <p>Tomb Raider-Iconic treasure-hunting adventure</p>
+              <a href="#" class="btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <img src="games/mares.jfif" class="img-fluid">
+            <div class="overlay">
+              <p>Sea of Solitude-Emotional journey through loneliness</p>
+              <a href="#" class="btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <img src="games/beyond.jfif" class="img-fluid">
+            <div class="overlay">
+              <p>Beyond: Two Souls-Paranormal drama with multiple endings</p>
+              <a href="#" class="btn-link">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+           <div class="box">
+             <img src="games/call%20of%20duty.jfif" class="img-fluid">
+             <div class="overlay">
+               <p>Call of Duty-Fast-paced action & epic warfare</p>
+               <a href="#" class="btn-link">Explore</a>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <!-- Coming Soon Section -->
   <div id="coming" class="coming pt-4 pb-4">
     <div class="container text-center">
@@ -259,7 +322,7 @@
       </p>
 
       <div class="row align-items-center mb-1">
-        <div class="col-lg-5 mb-3 text-center text-md-start">
+        <div class="col-lg-7 mb-3 text-center text-md-start">
           <div class="text">
             <h2>Leon S. Kennedy</h2>
             <p class="description text-white-50 fs-5">
@@ -271,8 +334,8 @@
           </div>
         </div>
 
-        <div class="col-lg-7">
-          <div class="lap">
+        <div class="col-lg-5">
+          <div>
             <img class="img-fluid mt-1" src="games/Leon.png">
           </div>
         </div>
@@ -345,7 +408,7 @@
         </div>
 
         <div class="col-md-6 col-lg-2 mt-3">
-            <a class="fs-4 btn rounded-pill">send</a>
+            <a class="fs-4 btn">send</a>
         </div>
       </div>
     </div>
@@ -357,7 +420,7 @@
       <div class="row fs-5">
         <div class="col-md-12 col-lg-6">
           <div class="info">
-            <img src="games/logo.png" style="width: 75px; height: 75px;">
+            <img src="logo.png" style="width: 75px; height: 75px;">
             <P>
                My laptop wheezed to life after a long day, its fan louder than my motivation to work.
             </P>
@@ -370,7 +433,7 @@
         <div class="col-md-12 col-lg-6">
           <div class="contact us">
             <h5 class="mb-3">contact us</h5>
-            <a class="btn rounded-pill main-btn w-100 p-3" href="#">basant.tareq.2005@gmail.com</a>
+            <a class="btn main-btn w-100 p-3" href="#">basant.tareq.2005@gmail.com</a>
 
             <ul class="d-flex mt-3 list-unstyled gap-3">
               <li>
