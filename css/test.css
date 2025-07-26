@@ -152,7 +152,7 @@ h2{
   color: var(--white-color);
 }
 .character img{
-  width: 500px;
+  width: 170px;
   filter: drop-shadow(0 -10px 25px var(--tale-color));
 }
 .lap img {
